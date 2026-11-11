@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>$ZEUS — Ansem's Dog</title>
+  <meta name="description" content="$ZEUS — Ansem's real dog, on Solana. Paired with $ANSEM on pump.fun. Bros, say hi to the homie.">
+  <meta name="theme-color" content="#0b0b0c">
+
+  <meta property="og:title" content="$ZEUS — Ansem's Dog">
+  <meta property="og:description" content="bros say hi to the homie Zeus. Paired with $ANSEM on pump.fun.">
+  <meta property="og:image" content="assets/og-icon.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="storm" aria-hidden="true"></canvas>
+  <canvas id="bolts" aria-hidden="true"></canvas>
+  <div class="flash" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <a href="#top" class="nav__brand" aria-label="$ZEUS home">
+      <svg class="bolt-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 1 4 14h6.5L9 23l11-14h-7z"/></svg>
+      <span>$ZEUS</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#lore">Lore</a>
+      <a href="#id">ID</a>
+      <a href="#walk">Buy</a>
+      <a href="#kennel">Kennel</a>
+      <a href="#chart">Chart</a>
+    </nav>
+    <a class="btn btn--orange btn--sm" href="https://pump.fun/coin/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">Buy $ZEUS</a>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <h1 class="hero__word" aria-label="ZEUS">
+        <span>Z</span><span>E</span><span>U</span><span>S</span>
+      </h1>
+
+      <div class="rig" id="rig">
+        <div class="rig__strap" aria-hidden="true"></div>
+        <svg class="rig__ring" viewBox="0 0 80 60" aria-hidden="true">
+          <defs>
+            <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4f6f8"/>
+              <stop offset=".45" stop-color="#8b9096"/>
+              <stop offset=".6" stop-color="#e2e5e8"/>
+              <stop offset="1" stop-color="#5d6167"/>
+            </linearGradient>
+          </defs>
+          <path d="M10 4 H70 V20 A30 30 0 0 1 10 20 Z" fill="none" stroke="url(#steel)" stroke-width="7" stroke-linejoin="round"/>
+        </svg>
+        <button class="tag" id="tag" type="button" aria-label="Zeus's dog tag — click to make it swing">
+          <span class="tag__ear" aria-hidden="true"></span>
+          <span class="tag__rim" aria-hidden="true"></span>
+          <svg class="tag__engrave" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="ringPath" d="M100,100 m-86,0 a86,86 0 1,1 172,0 a86,86 0 1,1 -172,0"/></defs>
+            <text><textPath href="#ringPath" textLength="536" lengthAdjust="spacing">ZEUS ⚡ ANSEM'S DOG ⚡ $ZEUS ⚡ IF FOUND RETURN TO ANSEM ⚡ GOOD BOY ⚡</textPath></text>
+          </svg>
+          <img class="tag__photo" src="assets/logo.jpg" alt="Zeus, a black and white pup in an orange harness" width="1277" height="1231">
+          <span class="tag__shine" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="hero__copy">
+        <p class="hero__kicker">Ansem's Dog</p>
+        <p class="hero__sub">A real pup. Black coat, white chest, orange harness.<br>On Solana. Walking with <b>$ANSEM</b>.</p>
+
+        <div class="ca" id="ca">
+          <span class="ca__label">CA</span>
+          <code class="ca__addr" id="caAddr">8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU</code>
+          <button class="ca__copy" id="caCopy" type="button">Copy</button>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn btn--orange" href="https://pump.fun/coin/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">Buy on pump.fun</a>
+          <a class="btn btn--ghost" href="https://dexscreener.com/solana/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">DexScreener ↗</a>
+        </div>
+      </div>
+
+      <p class="hero__hint" aria-hidden="true">click anywhere — call the thunder</p>
+    </section>
+
+    <!-- ============ HARNESS STRAPS ============ -->
+    <div class="straps" aria-hidden="true">
+      <div class="strap strap--a"><div class="strap__track">
+        <span>ANSEM'S DOG</span><i>⚡</i><span>$ZEUS</span><i>⚡</i><span>PAIRED WITH $ANSEM</span><i>⚡</i><span>SAY HI TO THE HOMIE</span><i>⚡</i>
+        <span>ANSEM'S DOG</span><i>⚡</i><span>$ZEUS</span><i>⚡</i><span>PAIRED WITH $ANSEM</span><i>⚡</i><span>SAY HI TO THE HOMIE</span><i>⚡</i>
+      </div></div>
+      <div class="strap strap--b"><div class="strap__track">
+        <span>GOOD BOY</span><i>⚡</i><span>ON SOLANA</span><i>⚡</i><span>PUMP.FUN</span><i>⚡</i><span>20% WITH THE OWNER</span><i>⚡</i>
+        <span>GOOD BOY</span><i>⚡</i><span>ON SOLANA</span><i>⚡</i><span>PUMP.FUN</span><i>⚡</i><span>20% WITH THE OWNER</span><i>⚡</i>
+      </div></div>
+      <div class="buckle"><span></span></div>
+    </div>
+
+    <!-- ============ LORE ============ -->
+    <section class="lore" id="lore">
+      <header class="sec-head reveal">
+        <span class="sec-head__no">Nº 01 — The Post</span>
+        <h2 class="sec-head__title">March, 2024.</h2>
+      </header>
+
+      <div class="lore__grid">
+        <figure class="polaroid reveal">
+          <img src="assets/logo.jpg" alt="The first photo of Zeus" loading="lazy" width="1277" height="1231">
+          <figcaption>exhibit A — first sighting of the homie</figcaption>
+        </figure>
+
+        <div class="lore__text">
+          <blockquote class="quote reveal">
+            <p>“bros say hi to the homie Zeus <span class="emoji">😁</span>”</p>
+            <cite>— Ansem <span>(@blknoiz06)</span>, on X, March 2024</cite>
+          </blockquote>
+
+          <ol class="chapters">
+            <li class="reveal">
+              <span class="chapters__no">i.</span>
+              <p>One post. No ticker, no roadmap, no thread. Just a black-and-white pup sitting on a rug in an orange harness, looking slightly to the left like he'd rather be somewhere with more treats.</p>
+            </li>
+            <li class="reveal">
+              <span class="chapters__no">ii.</span>
+              <p>The timeline did what the timeline does. Thousands of bros said hi. The homie had been <em>introduced</em>.</p>
+            </li>
+            <li class="reveal">
+              <span class="chapters__no">iii.</span>
+              <p>Zeus is a real dog. Probably a mix &mdash; part something, part something else, all homie. He doesn't read charts. He doesn't need to. The god of thunder never checked the price either.</p>
+            </li>
+            <li class="reveal">
+              <span class="chapters__no">iv.</span>
+              <p><b>$ZEUS</b> is his coin. Born on pump.fun, living on Solana, and it doesn't pair with SOL &mdash; it pairs with <b>$ANSEM</b>. The dog walks with the owner. That's the whole thesis.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ID CARD ============ -->
+    <section class="id" id="id">
+      <header class="sec-head reveal">
+        <span class="sec-head__no">Nº 02 — Papers</span>
+        <h2 class="sec-head__title">Certified Good Boy.</h2>
+      </header>
+
+      <div class="id__wrap">
+        <article class="passport reveal" id="passport">
+          <div class="passport__top">
+            <span>REPUBLIC OF SOLANA</span>
+            <span>CANINE IDENTIFICATION</span>
+          </div>
+          <div class="passport__body">
+            <div class="passport__photo">
+              <img src="assets/memes/meme9.jpg" alt="Zeus in his harness" loading="lazy">
+              <span class="passport__seal" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13.5 1 4 14h6.5L9 23l11-14h-7z"/></svg>
+              </span>
+            </div>
+            <dl class="passport__fields">
+              <div><dt>Name</dt><dd>Zeus</dd></div>
+              <div><dt>Ticker</dt><dd>$ZEUS</dd></div>
+              <div><dt>Owner</dt><dd>Ansem <small>@blknoiz06</small></dd></div>
+              <div><dt>Breed</dt><dd>Mixed <small>(probably)</small></dd></div>
+              <div><dt>Coat</dt><dd>Black &amp; white</dd></div>
+              <div><dt>Signature gear</dt><dd>Orange harness</dd></div>
+              <div><dt>First seen</dt><dd>March 2024</dd></div>
+              <div><dt>Temperament</dt><dd>Bullish</dd></div>
+            </dl>
+          </div>
+          <div class="passport__mrz" aria-hidden="true">
+            <span>P&lt;SOL&lt;ZEUS&lt;&lt;ANSEMS&lt;DOG&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span>
+            <span>8FGTQVE6DHD4MZSFBUQSJWF1TNEDTYM3IAKOVU4KIYMU&lt;&lt;</span>
+          </div>
+        </article>
+
+        <div class="stamps">
+          <div class="stamp reveal">
+            <span class="stamp__big">20%</span>
+            <span class="stamp__txt">of supply sits with the owner. Ansem holds the leash.</span>
+          </div>
+          <div class="stamp stamp--orange reveal">
+            <span class="stamp__big">$ANSEM</span>
+            <span class="stamp__txt">is the pair. Not SOL. Every $ZEUS trade walks through the owner's coin.</span>
+          </div>
+          <div class="stamp reveal">
+            <span class="stamp__big">pump.fun</span>
+            <span class="stamp__txt">where he was born. Solana is where he lives.</span>
+          </div>
+          <div class="stamp stamp--line reveal">
+            <span class="stamp__big">1</span>
+            <span class="stamp__txt">real dog. Not a mascot. Not a cartoon. He has a water bowl.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW TO BUY ============ -->
+    <section class="walk" id="walk">
+      <header class="sec-head reveal">
+        <span class="sec-head__no">Nº 03 — How to buy</span>
+        <h2 class="sec-head__title">Walk the dog.</h2>
+      </header>
+
+      <div class="walk__route">
+        <svg class="leash" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true">
+          <path id="leashPath" d="M50 0 C 90 120, 10 230, 50 340 S 90 560, 50 670 S 10 880, 50 1000" />
+        </svg>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__no">01</span>
+            <div>
+              <h3>Grab a wallet</h3>
+              <p>Phantom or Solflare. Load it with some SOL &mdash; that's the treat bag.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">02</span>
+            <div>
+              <h3>Meet the owner</h3>
+              <p>$ZEUS is paired with <b>$ANSEM</b>, not SOL. Have some $ANSEM ready, or swap into it on your way.</p>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">03</span>
+            <div>
+              <h3>Go to pump.fun</h3>
+              <p>Paste the CA below. Check it twice. Dogs only answer to one name.</p>
+              <button class="mini-ca" type="button" data-copy>8fGtqve6…AKovu4kiYmU <span>copy</span></button>
+            </div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">04</span>
+            <div>
+              <h3>Hold the leash</h3>
+              <p>Buy. Hold. Say hi to the homie. Good boys don't panic at thunder.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ KENNEL ============ -->
+    <section class="kennel" id="kennel">
+      <header class="sec-head reveal">
+        <span class="sec-head__no">Nº 04 — The Kennel</span>
+        <h2 class="sec-head__title">Fan art & field notes.</h2>
+        <p class="sec-head__aside"><span class="d">drag them around &middot; click to zoom</span><span class="m">tap to zoom</span></p>
+      </header>
+
+      <div class="board" id="board">
+        <figure class="card" data-x="4"  data-y="4"  data-r="-6"><img src="assets/memes/meme2.jpg" alt="Zeus waking up in a gold bedroom" loading="lazy"><figcaption>wake up zeus, it's pumping</figcaption></figure>
+        <figure class="card" data-x="30" data-y="0"  data-r="4"  data-w="wide"><img src="assets/memes/meme4.jpg" alt="Zeus running with a tennis ball" loading="lazy"><figcaption>fetch the bottom</figcaption></figure>
+        <figure class="card" data-x="74" data-y="6"  data-r="7"><img src="assets/memes/meme8.jpg" alt="Zeus with a glowing green bull" loading="lazy"><figcaption>bull behind him, always</figcaption></figure>
+        <figure class="card" data-x="10" data-y="40" data-r="3"><img src="assets/memes/meme7.jpg" alt="Zeus painting a bull" loading="lazy"><figcaption>only paints bulls</figcaption></figure>
+        <figure class="card" data-x="38" data-y="30" data-r="-3" data-w="wide"><img src="assets/memes/meme3.jpg" alt="Zeus guarding the vault" loading="lazy"><figcaption>the vault. guarded.</figcaption></figure>
+        <figure class="card" data-x="72" data-y="44" data-r="-8"><img src="assets/memes/meme6.jpg" alt="Zeus on a snowy summit" loading="lazy"><figcaption>summit, unbothered</figcaption></figure>
+        <figure class="card" data-x="2"  data-y="72" data-r="-4"><img src="assets/memes/meme1.jpg" alt="Zeus in a Los Santos style scene" loading="lazy"><figcaption>grove street homie</figcaption></figure>
+        <figure class="card" data-x="36" data-y="66" data-r="5"><img src="assets/memes/meme5.jpg" alt="Zeus running through a field" loading="lazy"><figcaption>running with the owner</figcaption></figure>
+        <figure class="card" data-x="68" data-y="76" data-r="2"><img src="assets/memes/meme9.jpg" alt="Zeus getting his harness on" loading="lazy"><figcaption>suiting up</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ CHART ============ -->
+    <section class="chart" id="chart">
+      <header class="sec-head reveal">
+        <span class="sec-head__no">Nº 05 — Live</span>
+        <h2 class="sec-head__title">From the dog park.</h2>
+      </header>
+      <div class="chart__frame reveal">
+        <iframe title="$ZEUS chart on DexScreener" loading="lazy"
+          src="https://dexscreener.com/solana/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU?embed=1&loadChartSettings=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="foot__top">
+      <p class="foot__big" aria-label="Good boy.">GOOD<br>BOY.</p>
+      <figure class="polaroid polaroid--foot">
+        <img src="assets/memes/meme5.jpg" alt="Zeus running through a field with Ansem" loading="lazy">
+        <figcaption>see you at the park, bros</figcaption>
+      </figure>
+    </div>
+    <div class="foot__row">
+      <div class="foot__links">
+        <a href="https://pump.fun/coin/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">pump.fun</a>
+        <a href="https://dexscreener.com/solana/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">DexScreener</a>
+        <a href="https://solscan.io/token/8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU" target="_blank" rel="noopener">Solscan</a>
+        <a href="https://x.com/search?q=%24ZEUS&src=typed_query&f=live" target="_blank" rel="noopener">$ZEUS on X</a>
+      </div>
+      <button class="foot__ca" type="button" data-copy>8fGtqve6dHD4MzsFbuQsJwF1TneDTym3iAKovu4kiYmU</button>
+    </div>
+    <p class="foot__legal">$ZEUS is a memecoin with no intrinsic value or expectation of financial return. No roadmap, no promises, not financial advice. The only thing guaranteed here is that the dog is real.</p>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" type="button" aria-label="Close">×</button>
+    <img alt="">
+    <p class="lightbox__cap"></p>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
