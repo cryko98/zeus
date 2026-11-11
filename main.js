@@ -6,6 +6,9 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const DPR = Math.min(window.devicePixelRatio || 1, 2);
+  // ?og renders a static hero composition used to capture the link-preview image
+  const OG = new URLSearchParams(location.search).has("og");
+  if (OG) document.documentElement.classList.add("og");
 
   /* ---------------- toast + copy ---------------- */
   const toast = $("#toast");
@@ -189,12 +192,12 @@
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 40);
     const d = window.scrollY - lastSY; lastSY = window.scrollY;
-    pend.v += Math.max(-.02, Math.min(.02, d * .0004));
+    if (window.scrollY < H * .8) pend.v += Math.max(-.008, Math.min(.008, d * .0003));
   }, { passive: true });
 
   let idle = 0;
   function tick(dt) {
-    if (reduced) return;
+    if (reduced || OG) return;
     const s = dt / 16;
     idle += dt * .0011;
     const target = Math.sin(idle) * .018;
@@ -202,11 +205,21 @@
     pend.v *= Math.pow(.965, s);
     pend.v = Math.max(-.12, Math.min(.12, pend.v));
     pend.a += pend.v * s;
-    pend.a = Math.max(-.6, Math.min(.6, pend.a));
+    pend.a = Math.max(-.35, Math.min(.35, pend.a));
     rig.style.transform = `rotate(${pend.a}rad)`;
   }
 
   /* intro strike */
+  if (OG) {
+    window.addEventListener("load", () => {
+      const r = tag.getBoundingClientRect();
+      const b = makeBolt(r.right + 90, r.top + r.height * .55);
+      b.life = Infinity;
+      bolts.push(b);
+      word.classList.add("lit");
+    });
+    return requestAnimationFrame(loop);
+  }
   window.addEventListener("load", () => {
     setTimeout(() => {
       const r = tag.getBoundingClientRect();
